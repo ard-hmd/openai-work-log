@@ -22,9 +22,12 @@
 
       <input type="submit" value="Générer le journal">
     </form>
-
+    {% if elapsed_time %}
+    <p>Temps d'exécution de la requête : {{ elapsed_time }} secondes</p>
+    {% endif %}
+    
     {% if result %}
-    <div>{{ result|safe }}</div>
+    <div>{{ result }}</div>
     {% endif %}
 </body>
 </html>
